@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "mml",
+  "version": "${version}",
+
+  "name": "More Moonsteel Loot",
+  "description": "Mod (addon) that makes some modded ores affected by moonsteel fortune",
+  "authors": [
+    "Bread (with a lot of help)"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+	"icon": "icon.png",
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+			"cursedbread.mml.MMLMain"
+    ],
+		"beforeGameStart": [
+			"cursedbread.mml.MMLMain"
+		],
+		"afterGameStart": [
+			"cursedbread.mml.MMLMain"
+		],
+		"recipesReady": [
+			"cursedbread.mml.MMLMain"
+		]
+	},
+  "mixins": [
+      "mml.mixins.json"
+  ],
+
+  "depends": {
+		"minecraft": "*",
+    "fabricloader": ">=0.15.5"
+  },
+  "suggests": {
+  }
+}
