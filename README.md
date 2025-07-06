@@ -5,3 +5,5 @@ Addon for MoonMoonMoon mod that makes some modded ores affected by moonsteel for
 Current list of mods supported:
 
 Signal Industries
+
+Deep
