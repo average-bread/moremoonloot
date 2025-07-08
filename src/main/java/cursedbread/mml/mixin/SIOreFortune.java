@@ -14,21 +14,13 @@ import useless.moonsteel.MoonSteelBlocks;
 
 @Mixin(value = MoonSteelBlocks.class, remap = false)
 
-public class ModOreFortune {
+public class SIOreFortune {
 	@Inject(method = "canBeFortuned(Lnet/minecraft/core/block/Block;)Z", at = @At("HEAD"), cancellable = true)
 	private static void canBeFortuned(Block block, CallbackInfoReturnable<Boolean> cir){
 		if (MMLMain.siOn){
 			if (Block.hasLogicClass(block, BlockLogicOreDilithium.class)) cir.setReturnValue(true);
 			if (Block.hasLogicClass(block, BlockLogicOreSignalite.class)) cir.setReturnValue(true);
 			if (Block.hasLogicClass(block, BlockLogicOreDimensionalShard.class)) cir.setReturnValue(true);
-		}
-		if (MMLMain.deepOn){
-			if (Block.hasLogicClass(block, BlockLogicRhodoniteOre.class)) cir.setReturnValue(true);
-			if (Block.hasLogicClass(block, BlockLogicAmethystOre.class)) cir.setReturnValue(true);
-			if (Block.hasLogicClass(block, BlockLogicSilverOre.class)) cir.setReturnValue(true);
-			if (Block.hasLogicClass(block, BlockLogicUraniumOre.class)) cir.setReturnValue(true);
-			if (Block.hasLogicClass(block, BlockLogicLeadOre.class)) cir.setReturnValue(true);
-			if (Block.hasLogicClass(block, BlockLogicTopazOre.class)) cir.setReturnValue(true);
 		}
 	}
 }
